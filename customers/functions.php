@@ -67,3 +67,14 @@ function view($id = null) {
 	global $customer;
 	$customer = find('customers', $id);
   }
+
+  /**
+ *  Exclusão de um Cliente
+ */
+function delete($id = null) {
+
+	global $customer;
+	$customer = remove('customers', $id);
+  
+	header('location: index.php');
+  }
